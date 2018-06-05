@@ -6,6 +6,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class GreaterTest {
@@ -18,12 +19,12 @@ public class GreaterTest {
 
     @Parameters(name= "test: {0}")
     public static Iterable<Object[]> parameters() {
-        return asList(new Object[][] {{"a"}, {"b"}, {"</lol>"}, {"\n"}});
+        return asList(new Object[][] {{"\0 Null-Byte a b </lol> \n"}});
     }
 
     @Test
     public void test() {
-        new Greater().great();
+        assertEquals("Bonjour", new Greater().great());
     }
 
 }
