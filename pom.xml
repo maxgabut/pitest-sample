@@ -11,6 +11,7 @@
     <modules>
         <module>with-test</module>
         <module>without-test</module>
+        <module>with-parameterized-test</module>
     </modules>
 
     <dependencies>
