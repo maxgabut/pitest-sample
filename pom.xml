@@ -33,8 +33,6 @@
                 <configuration>
                     <exportLineCoverage>true</exportLineCoverage>
                     <outputFormats><value>XML</value></outputFormats>
-                    <!-- documentation note : need to disable timestamps... (or does it ?) -->
-                    <timestampedReports>false</timestampedReports>
                 </configuration>
                 <executions>
                     <execution>
