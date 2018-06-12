@@ -31,12 +31,11 @@
                 <artifactId>pitest-maven</artifactId>
                 <executions>
                     <execution>
-                        <id>run-mutation-tests</id>
+                        <id>pitest-mutation-coverage</id>
                         <phase>none</phase>
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>prepare-package</phase>
                         <goals>
                             <goal>report-aggregate</goal>
                         </goals>

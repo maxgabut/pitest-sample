@@ -38,22 +38,38 @@
                 <plugin>
                     <groupId>org.pitest</groupId>
                     <artifactId>pitest-maven</artifactId>
-                    <version>1.4.0</version>
+                    <version>1.3.2</version>
                     <configuration>
+                        <outputFormats>
+                            <param>HTML</param>
+                            <param>XML</param>
+                        </outputFormats>
+                        <!-- omitting mutators, testPlugin and verbose for brevity -->
                         <exportLineCoverage>true</exportLineCoverage>
-                        <outputFormats><value>XML</value></outputFormats>
+                        <!-- it's currently not possible to aggregate timestamped reports-->
                         <timestampedReports>false</timestampedReports>
                     </configuration>
                     <executions>
                         <execution>
-                            <id>run-mutation-tests</id>
+                            <!-- Use an id to disable it in some submodules -->
+                            <id>pitest-mutation-coverage</id>
+                            <phase>test</phase>
                             <goals>
                                 <goal>mutationCoverage</goal>
                             </goals>
                         </execution>
+                        <!-- NO report-aggregate here -->
                     </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
+        <!-- REMOVE THAT
+        <plugins>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+            </plugin>
+        </plugins>
+        -->
     </build>
 </project>
