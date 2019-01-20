@@ -141,7 +141,7 @@
                     <plugin>
                         <groupId>org.pitest</groupId>
                         <artifactId>pitest-maven</artifactId>
-                        <version>1.4.4-SNAPSHOT</version>
+                        <version>1.4.3</version>
                         <configuration>
                             <exportLineCoverage>true</exportLineCoverage>
                             <outputFormats>
@@ -174,7 +174,7 @@
                     <plugin>
                         <groupId>org.pitest</groupId>
                         <artifactId>pitest-maven</artifactId>
-                        <version>1.4.4-SNAPSHOT</version>
+                        <version>1.4.3</version>
                         <configuration>
                             <exportLineCoverage>true</exportLineCoverage>
                             <outputFormats>
