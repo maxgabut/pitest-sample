@@ -1,6 +1,6 @@
 Sample project using [pitest](http://pitest.org/).
 
-This branche was created to keep code samples for https://github.com/hcoles/pitest/issues/548.
+This branch was created to keep code samples for https://github.com/hcoles/pitest/issues/548.
 
 `/simple` folder contains a maven project with interesting profiles
 
