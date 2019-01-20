@@ -55,5 +55,45 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>null-targets</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-maven</artifactId>
+                        <version>1.4.4-SNAPSHOT</version>
+                        <configuration>
+                            <exportLineCoverage>true</exportLineCoverage>
+                            <outputFormats>
+                                <value>XML</value>
+                                <value>HTML</value>
+                            </outputFormats>
+                            <timestampedReports>false</timestampedReports>
+                            <targetClasses>
+                                <targetClass>org.maxgabut.JavaClass</targetClass>
+                                <targetClass></targetClass>
+                            </targetClasses>
+                            <targetTests>
+                                <targetTest>org.maxgabut.JavaClassTest</targetTest>
+                                <targetTest></targetTest>
+                            </targetTests>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>run-mutation-tests</id>
+                                <goals>
+                                    <goal>mutationCoverage</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 </project>
