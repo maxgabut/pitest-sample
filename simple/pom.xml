@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <pitest.plugin.version>1.4.4-SNAPSHOT</pitest.plugin.version>
+        <pitest.plugin.version>1.4.5</pitest.plugin.version>
     </properties>
 
     <dependencies>
