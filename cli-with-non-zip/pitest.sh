@@ -3,7 +3,7 @@
 PITEST_CLASS_PATH="target/classes"
 PITEST_CLASS_PATH+=",target/test-classes"
 PITEST_CLASS_PATH+=",project-bin/junit-4.12.jar"
-PITEST_CLASS_PATH+=",project-bin/jquery-ui-1.12.1.jar"
+PITEST_CLASS_PATH+=",project-bin/jquery-3.3.1.min.js"
 
 java -cp "bin/*"                                               \
     org.pitest.mutationtest.commandline.MutationCoverageReport \
